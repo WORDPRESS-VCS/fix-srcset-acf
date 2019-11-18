@@ -1,0 +1,11 @@
+	<?php
+	// From Acf
+	$imageid = get_field('get_srcset_image_from_here');
+	function khalif_srcset_gen($image_id)
+			{
+				$srcsrc = wp_get_attachment_image_srcset($image_id);
+				return 'srcset="'.$srcsrc.'"';
+			}
+
+	?>
+   <?php echo khalif_srcset_gen($imageid); ?>
